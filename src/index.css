@@ -17,7 +17,10 @@ a.active hr {
   font-style: normal;
 }
 
-@media (max-width: 640px){
+::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 640px) {
   a.active {
     background-color: lightpink;
     color: lightslategray;

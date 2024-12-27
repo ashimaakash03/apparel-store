@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/frontend_assets/assets";
+import { toast } from "react-toastify";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
@@ -12,6 +13,10 @@ const ShopContextProvider = (props) => {
 
   const addToCart = async (itemId, size) => {
     let cartData = structuredClone(cartItems);
+    if (!size) {
+      toast.error("Please Select A Size");
+      return;
+    }
     if (cartData[itemId]) {
       if (cartData[itemId][size]) {
         cartData[itemId][size] += 1;
@@ -25,9 +30,9 @@ const ShopContextProvider = (props) => {
     setCartItems(cartData);
   };
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log(cartItems);
-  },[cartItems])
+  }, [cartItems]);
   const value = {
     products,
     currency,

@@ -96,7 +96,7 @@ const PlaceOrder = () => {
             >
               <p
                 className={`min-w-4 h-4 border rounded-full ${
-                  method === "stripe" ? "bg-blue-700" : ""
+                  method === "stripe" ? "bg-black" : ""
                 }`}
               ></p>
               <img className="h-5 mx-4" src={assets.stripe_logo} alt="" />
@@ -107,7 +107,7 @@ const PlaceOrder = () => {
             >
               <p
                 className={`min-w-4 h-4 border rounded-full ${
-                  method === "razorpay" ? "bg-blue-700" : ""
+                  method === "razorpay" ? "bg-black" : ""
                 }`}
               ></p>
               <img className="h-5 mx-4" src={assets.razorpay_logo} alt="" />
@@ -118,7 +118,7 @@ const PlaceOrder = () => {
             >
               <p
                 className={`min-w-4 h-4 border rounded-full ${
-                  method === "COD" ? "bg-blue-700" : ""
+                  method === "COD" ? "bg-black" : ""
                 }`}
               ></p>
               <p className="text-gray-500 text-sm font-medium mx-4">

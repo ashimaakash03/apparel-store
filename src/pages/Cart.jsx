@@ -40,7 +40,9 @@ const Cart = () => {
           return (
             <div
               key={index}
-              className="py-5 border-t border-b text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
+              className={`py-5 border-t border-b text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4 ${
+                item.quantity === 0 ? "hidden" : ""
+              }`}
             >
               <div className="flex items-start gap-4">
                 <img
